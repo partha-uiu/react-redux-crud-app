@@ -1,0 +1,29 @@
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c5deea+0,8abbd7+31,066dab+100;Web+2.0+Blue+3D+%231 */
+    background: #c5deea; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #c5deea 0%, #8abbd7 31%, #066dab 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #c5deea 0%,#8abbd7 31%,#066dab 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #c5deea 0%,#8abbd7 31%,#066dab 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-repeat:none ;
+}
+
+.tododiv {
+    width: 50%;
+    margin: 0 auto;
+    display: inline-block;
+    color: black;
+    list-style: none;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.d-inline-block {
+    display:inline-block;
+}
+
+.p-r-5 {
+    padding-right: 5px;
+}

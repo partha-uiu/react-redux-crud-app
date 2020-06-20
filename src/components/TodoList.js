@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function TodoList(props) {
     return (
-        <div>
-            <ul><li>{props.title}</li></ul>
-        </div>
+       
+            <span className="d-inline-block p-r-5">{props.title}</span>
+        
     )
 }
