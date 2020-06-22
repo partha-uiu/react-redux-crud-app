@@ -14,3 +14,10 @@ export function addTodo(todo) {
   }
 }
 
+ export function editTodo(id) {
+  return {
+    type: types.EDIT_TODO,
+    payload: id
+  }
+}
+

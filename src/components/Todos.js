@@ -1,11 +1,11 @@
 import React from 'react';
 import TodoList from './TodoList';
 import {useDispatch} from 'react-redux';
-import {addTodo, deleteTodo} from '../redux/actions/todo';
+import {addTodo, deleteTodo, editTodo} from '../redux/actions/todo';
 import  '../styles.css';
 
  function Todos(props) {
-
+   console.log(props);
     const dispatch = useDispatch();
     
     const submitForm = e => {
@@ -25,16 +25,19 @@ import  '../styles.css';
         dispatch(deleteTodo(id))
 
     };
+
+    const handleEdit = (e, id) => {
+        dispatch(editTodo(id))
+        e.preventDefault();
+        dispatch(editTodo(e.target.todo.value))
+        e.target.todo.value = "";
+    };
         
     return (
         <div className="tododiv">
-            <form class="form-inline mb-5" onSubmit={submitForm}>
-                <input type="text" name="todo" class="form-control" />
-                <input type="submit" value="Add" class="btn btn-primary" />
-            </form> 
-            <ul className=" list-group">
-                {props.todos.map(todo => <li class="list-group-item"> <TodoList key={todo.id} title={todo.title} />
-                <a onClick ={() =>handleDelete(todo.id)}><i class="fas fa-trash"></i></a></li>)}      
+            <ul className = "list-group">
+                {props.todos.map(todo => <li class="list-group-item"> <TodoList key={todo.id} todo={todo} />
+               </li>)}      
             </ul>
         </div>
     )

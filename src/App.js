@@ -2,9 +2,13 @@ import React  from 'react';
 import Todo from './components/Todos';
 import { useSelector } from 'react-redux'
 import styles from './styles.css';
+import AddTodo from './components/AddTodo';
 
 function App() {
-  const states =  useSelector(state=>state);
+  const states =  useSelector(state=>state.todos);
+  // const currentTodo = useSelector(state=>state.currentTodo);
+  console.log(states);
+  
   return (
     <div className="App">
       <div className="row text-center">
@@ -15,6 +19,7 @@ function App() {
           <div class="p-3 mb-2  text-white"><h1>Todo List</h1></div>       
         </div>
         <div className="row">
+          <AddTodo   />
           <div className={styles.tododiv}>        
             <Todo todos = {states} />
           </div>
